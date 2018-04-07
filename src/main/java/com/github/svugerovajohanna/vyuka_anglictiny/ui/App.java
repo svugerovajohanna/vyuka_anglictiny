@@ -7,8 +7,10 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-/** Třída Start bude hlavní třídou projektu,
-* který představuje jednoduchou aplikaci pro výuku angličtiny.
+/** Třída sloužící ke spuštění 
+* jednoduché aplikace pro výuku angličtiny.
+*
+* Při spuštění bez parametru konstuuje nové okno aplikace.
 *
 * @author    Johanna Švugerová
 * @version   LS 2017/2018

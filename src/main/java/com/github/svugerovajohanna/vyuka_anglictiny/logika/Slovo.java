@@ -3,7 +3,7 @@ package com.github.svugerovajohanna.vyuka_anglictiny.logika;
 /**
 * Třída slovo posisuje jednotlivá slova hry. 
 * 
-* Slovo má vždy český a anglický překlad.
+* Slovo má vždy český a anglický překlad a číslo, které ho  v této aplikaci reprezentuje.
 *
 * @author    Johanna Švugerová
 * @version   LS 2017/2018
@@ -20,6 +20,7 @@ public class Slovo {
 	 * 
 	 * @param cesky - slovo v cestine
 	 * @param anglicky - slovo v anglictine
+	 * @param cislo - přiřazené číslo, které dané slovo v aplikaci reprezentuje
 	 */
 	
 	public Slovo(String cesky, String anglicky, int cislo) {
@@ -30,6 +31,8 @@ public class Slovo {
 	
 	/** 
 	 * Metoda pro získání českého překladu.
+	 * 
+	 * @return český překlad slova
 	 *
 	 */
 
@@ -39,6 +42,8 @@ public class Slovo {
 	
 	/** 
 	 * Metoda pro nastavení českého překladu.
+	 * 
+	 * @ param cesky - zadaný český překlad 
 	 *
 	 */
 	public void setCesky(String cesky) {
@@ -46,8 +51,9 @@ public class Slovo {
 	}
 
 	/** 
-	 * Metoda pro získání anglického překladu.
+	 * Metoda pro získání anglického překladu
 	 *
+	 * @return anglický překlad slov
 	 */
 	public String getAnglciky() {
 		return anglciky;
@@ -56,16 +62,27 @@ public class Slovo {
 	
 	/** 
 	 * Metoda pro nastavení anglického překladu.
-	 *
+	 * 
+	 * @param anglicky - zadaný anglický překlad
 	 */
 	public void setAnglciky(String anglciky) {
 		this.anglciky = anglciky;
 	}
 
+	/**
+	 * Metoda pro získání čísla reprezetující slovo.
+	 * 
+	 * @return číslo (int), které reprezentuje dané slovo
+	 */
 	public int getCislo() {
 		return cislo;
 	}
 
+	/**
+	 * Metoda umožňuje nastavit slovu jeho čísloů.
+	 * 
+	 * @param cislo - číslo reprezentujicí dané slovo
+	 */
 	public void setCislo(int cislo) {
 		this.cislo = cislo;
 	}

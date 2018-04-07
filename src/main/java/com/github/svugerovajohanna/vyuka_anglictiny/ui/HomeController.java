@@ -11,6 +11,14 @@ import javafx.scene.control.Button;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
+
+/**
+ * Kontroler, který zprostředkovává komunikaci mezi grafikou
+ * a logikou aplikace.
+ * 
+ * @author johannasvugerova
+ *
+ */
 public class HomeController extends GridPane {
 	
 	@FXML private Label slovo;
@@ -33,6 +41,12 @@ public class HomeController extends GridPane {
 	private int spatnyPokus;
 	
 	
+	/**
+	 * Metoda slouží pro předání objektu se spuštěnou hrou
+	 * kontroleru a zobrazí stav hry v grafice.
+	 * 
+	 * @param hra - objekt spuštěné hry
+	 */
 	public void inicializuj(Hra hra){
 		auto.setDisable(true);
 		pes.setDisable(true);
@@ -59,10 +73,23 @@ public class HomeController extends GridPane {
 		alertSpatne.setContentText("Vybral jsi špatně. Zkus vybrat jiný obrázek.");
 	}
 	
+	/**
+	 * Metoda pro spuětění nové hry z menu.
+	 * 
+	 */
 	@FXML public void novaHra() {
 		inicializuj(new Hra());
 	}
 
+	/**
+	 * Metoda definující akci po stisknutí tlačítka "Hádej".
+	 * 
+	 * Náhodně se vygeneruje slovo, 
+	 * jehož anglický text se zobrazí v labelu.
+	 * 
+	 * Tlačítko "Hádej" se poté zablokuje, 
+	 * naopak se uvolní tlačítka s obrázky.
+	 */
 	@FXML private void handleButtonAction(ActionEvent event) {
 		java.util.Random generator = new java.util.Random();
         int nahoda = generator.nextInt(6)+1;
@@ -82,6 +109,17 @@ public class HomeController extends GridPane {
    
 	}
 	
+	/**
+	 * 
+	 * Metoda pro funkci tlačítka s obrázkem kočky.
+	 * 
+	 * Zobrazí se alert, 
+	 * jestli bylo tlačítko vybráno špatně nebo správně,
+	 * a změní se počet správných/špatných pokusů.
+	 * 
+	 * Po správném pokusu se znovu odblokuje tlačítko "Hádej"
+	 * a tlačítka s obrázky se zablokují.
+	 */
 	@FXML private void vyberKocka(ActionEvent event) {
 		if( vybraneSlovo.getCesky() == "kočka") {
 			spravnyPokus++;
@@ -104,9 +142,19 @@ public class HomeController extends GridPane {
 		spravne.setText(String.valueOf(hra.getSpravne()));
 		spatne.setText(String.valueOf(hra.getSpatne()));
 		
-		
-
 	}
+	
+	/**
+	 * 
+	 * Metoda pro funkci tlačítka s obrázkem kytky.
+	 * 
+	 * Zobrazí se alert, 
+	 * jestli bylo tlačítko vybráno špatně nebo správně,
+	 * a změní se počet správných/špatných pokusů.
+	 * 
+	 * Po správném pokusu se znovu odblokuje tlačítko "Hádej"
+	 * a tlačítka s obrázky se zablokují.
+	 */
 	@FXML private void vyberKytka(ActionEvent event) {
 		if( vybraneSlovo.getCesky() == "kytka") {
 			spravnyPokus++;
@@ -129,9 +177,19 @@ public class HomeController extends GridPane {
 		spravne.setText(String.valueOf(hra.getSpravne()));
 		spatne.setText(String.valueOf(hra.getSpatne()));
 		
-		
-
 	}
+	
+	/**
+	 * 
+	 * Metoda pro funkci tlačítka s obrázkem kluka.
+	 * 
+	 * Zobrazí se alert, 
+	 * jestli bylo tlačítko vybráno špatně nebo správně,
+	 * a změní se počet správných/špatných pokusů.
+	 * 
+	 * Po správném pokusu se znovu odblokuje tlačítko "Hádej"
+	 * a tlačítka s obrázky se zablokují.
+	 */
 	@FXML private void vyberKluk(ActionEvent event) {
 		if( vybraneSlovo.getCesky() == "kluk") {
 			spravnyPokus++;
@@ -152,12 +210,21 @@ public class HomeController extends GridPane {
 			
 		}
 		spravne.setText(String.valueOf(hra.getSpravne()));
-		spatne.setText(String.valueOf(hra.getSpatne()));
-		
-		
+		spatne.setText(String.valueOf(hra.getSpatne()));	
 
 	}
 	
+	/**
+	 * 
+	 * Metoda pro funkci tlačítka s obrázkem holky.
+	 * 
+	 * Zobrazí se alert, 
+	 * jestli bylo tlačítko vybráno špatně nebo správně,
+	 * a změní se počet správných/špatných pokusů.
+	 * 
+	 * Po správném pokusu se znovu odblokuje tlačítko "Hádej"
+	 * a tlačítka s obrázky se zablokují.
+	 */
 	@FXML private void vyberHolka(ActionEvent event) {
 		if( vybraneSlovo.getCesky() == "holka") {
 			spravnyPokus++;
@@ -180,10 +247,19 @@ public class HomeController extends GridPane {
 		spravne.setText(String.valueOf(hra.getSpravne()));
 		spatne.setText(String.valueOf(hra.getSpatne()));
 		
-		
-
 	}
 	
+	/**
+	 * 
+	 * Metoda pro funkci tlačítka s obrázkem psa.
+	 * 
+	 * Zobrazí se alert, 
+	 * jestli bylo tlačítko vybráno špatně nebo správně,
+	 * a změní se počet správných/špatných pokusů.
+	 * 
+	 * Po správném pokusu se znovu odblokuje tlačítko "Hádej"
+	 * a tlačítka s obrázky se zablokují.
+	 */
 	@FXML private void vyberPes(ActionEvent event) {
 		if( vybraneSlovo.getCesky() == "pes") {
 			spravnyPokus++;
@@ -206,10 +282,19 @@ public class HomeController extends GridPane {
 		spravne.setText(String.valueOf(hra.getSpravne()));
 		spatne.setText(String.valueOf(hra.getSpatne()));
 		
-		
-
 	}
 	
+	/**
+	 * 
+	 * Metoda pro funkci tlačítka s obrázkem auta.
+	 * 
+	 * Zobrazí se alert, 
+	 * jestli bylo tlačítko vybráno špatně nebo správně,
+	 * a změní se počet správných/špatných pokusů.
+	 * 
+	 * Po správném pokusu se znovu odblokuje tlačítko "Hádej"
+	 * a tlačítka s obrázky se zablokují.
+	 */
 	@FXML private void vyberAuto(ActionEvent event) {
 		if( vybraneSlovo.getCesky() == "auto") {
 			spravnyPokus++;
@@ -232,8 +317,6 @@ public class HomeController extends GridPane {
 		spravne.setText(String.valueOf(hra.getSpravne()));
 		spatne.setText(String.valueOf(hra.getSpatne()));
 		
-		
-
 	}
 
 	
