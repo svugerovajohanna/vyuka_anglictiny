@@ -13,6 +13,7 @@ public class Slovo {
 
 	private String cesky;
 	private String anglciky;
+	private int cislo;
 	
 	/** 
 	 * Konstruktor metody Slovo.
@@ -21,9 +22,10 @@ public class Slovo {
 	 * @param anglicky - slovo v anglictine
 	 */
 	
-	public Slovo(String cesky, String anglicky) {
+	public Slovo(String cesky, String anglicky, int cislo) {
 		this.setCesky(cesky);
 		this.setAnglciky(anglicky);
+		this.cislo = cislo;
 	}
 	
 	/** 
@@ -58,5 +60,13 @@ public class Slovo {
 	 */
 	public void setAnglciky(String anglciky) {
 		this.anglciky = anglciky;
+	}
+
+	public int getCislo() {
+		return cislo;
+	}
+
+	public void setCislo(int cislo) {
+		this.cislo = cislo;
 	}
 }
