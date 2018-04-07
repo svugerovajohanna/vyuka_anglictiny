@@ -1,7 +1,6 @@
 package com.github.svugerovajohanna.vyuka_anglictiny.ui;
 
 import com.github.svugerovajohanna.vyuka_anglictiny.logika.Hra;
-import com.github.svugerovajohanna.vyuka_anglictiny.logika.SeznamSlov;
 
 
 import javafx.scene.layout.GridPane;
@@ -20,9 +19,15 @@ public class HomeController extends GridPane {
 	
 	
 	public void inicializuj(Hra hra){
+		slovo.setText(null);
 		this.hra = hra;
 		//hadej.setOnAction(this::handleButtonAction);
 	
+	}
+	
+	@FXML public void novaHra() {
+		inicializuj(new Hra());
+		
 	}
 
 	@FXML private void handleButtonAction(ActionEvent event) {

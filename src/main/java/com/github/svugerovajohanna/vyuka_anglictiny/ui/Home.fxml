@@ -91,7 +91,7 @@
         <menus>
           <Menu mnemonicParsing="false" text="Soubor">
             <items>
-              <MenuItem mnemonicParsing="false" text="Nová hra" />
+              <MenuItem fx:id="novaHra" mnemonicParsing="false" onAction="#novaHra" text="Nová hra" />
             </items>
           </Menu>
         </menus>
@@ -168,10 +168,16 @@
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </GridPane.margin>
       </HBox>
-      <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+      <HBox prefHeight="17.0" prefWidth="231.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
          <GridPane.margin>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </GridPane.margin>
+         <children>
+            <Label text="Správně:" textFill="#2cc37a" />
+            <Label fx:id="spravne" prefHeight="17.0" prefWidth="54.0" style="-fx-background-color: white; -fx-border-color: black;" text="Label" />
+            <Label alignment="CENTER_RIGHT" prefHeight="17.0" prefWidth="69.0" text="Špatně:" textFill="#e16161" />
+            <Label prefHeight="19.0" prefWidth="52.0" style="-fx-background-color: white; -fx-border-color: black;" text="Label" />
+         </children>
       </HBox>
    </children>
 </GridPane>
