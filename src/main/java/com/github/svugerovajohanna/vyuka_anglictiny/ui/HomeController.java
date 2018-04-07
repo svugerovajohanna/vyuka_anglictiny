@@ -5,6 +5,8 @@ import com.github.svugerovajohanna.vyuka_anglictiny.logika.Slovo;
 
 import javafx.scene.layout.GridPane;
 import javafx.scene.control.Label;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -21,6 +23,8 @@ public class HomeController extends GridPane {
 	@FXML private Button kluk;
 	@FXML private Button kytka;
 	@FXML private Button kocka;
+	@FXML private Alert alertSpravne;
+	@FXML private Alert alertSpatne;
 	
 	private Hra hra;
 	private String vybranyText;
@@ -43,7 +47,16 @@ public class HomeController extends GridPane {
 		spravnyPokus = 0;
 		spatnyPokus = 0;
 		//hadej.setOnAction(this::handleButtonAction);
+		
+		alertSpravne = new Alert(AlertType.INFORMATION);
+		alertSpravne.setTitle("Správně!");
+		alertSpravne.setHeaderText(null);
+		alertSpravne.setContentText("Vybral jsi správně. Nyní můžeš hádat další slovo.");
 	
+		alertSpatne = new Alert(AlertType.INFORMATION);
+		alertSpatne.setTitle("Špatně!");
+		alertSpatne.setHeaderText(null);
+		alertSpatne.setContentText("Vybral jsi špatně. Zkus vybrat jiný obrázek.");
 	}
 	
 	@FXML public void novaHra() {
@@ -72,6 +85,7 @@ public class HomeController extends GridPane {
 	@FXML private void vyberKocka(ActionEvent event) {
 		if( vybraneSlovo.getCesky() == "kočka") {
 			spravnyPokus++;
+			alertSpravne.showAndWait();
 			hra.setSpravne(spravnyPokus);
 			hadej.setDisable(false);
 			auto.setDisable(true);
@@ -82,6 +96,7 @@ public class HomeController extends GridPane {
 			kocka.setDisable(true);
 		}
 		else {
+			alertSpatne.showAndWait();
 			spatnyPokus++;
 			hra.setSpatne(spatnyPokus);
 			
@@ -95,6 +110,7 @@ public class HomeController extends GridPane {
 	@FXML private void vyberKytka(ActionEvent event) {
 		if( vybraneSlovo.getCesky() == "kytka") {
 			spravnyPokus++;
+			alertSpravne.showAndWait();
 			hra.setSpravne(spravnyPokus);
 			hadej.setDisable(false);
 			auto.setDisable(true);
@@ -105,6 +121,7 @@ public class HomeController extends GridPane {
 			kocka.setDisable(true);
 		}
 		else {
+			alertSpatne.showAndWait();
 			spatnyPokus++;
 			hra.setSpatne(spatnyPokus);
 			
@@ -118,6 +135,7 @@ public class HomeController extends GridPane {
 	@FXML private void vyberKluk(ActionEvent event) {
 		if( vybraneSlovo.getCesky() == "kluk") {
 			spravnyPokus++;
+			alertSpravne.showAndWait();
 			hra.setSpravne(spravnyPokus);
 			hadej.setDisable(false);
 			auto.setDisable(true);
@@ -128,6 +146,7 @@ public class HomeController extends GridPane {
 			kocka.setDisable(true);
 		}
 		else {
+			alertSpatne.showAndWait();
 			spatnyPokus++;
 			hra.setSpatne(spatnyPokus);
 			
@@ -142,6 +161,7 @@ public class HomeController extends GridPane {
 	@FXML private void vyberHolka(ActionEvent event) {
 		if( vybraneSlovo.getCesky() == "holka") {
 			spravnyPokus++;
+			alertSpravne.showAndWait();
 			hra.setSpravne(spravnyPokus);
 			hadej.setDisable(false);
 			auto.setDisable(true);
@@ -152,6 +172,7 @@ public class HomeController extends GridPane {
 			kocka.setDisable(true);
 		}
 		else {
+			alertSpatne.showAndWait();
 			spatnyPokus++;
 			hra.setSpatne(spatnyPokus);
 			
@@ -166,6 +187,7 @@ public class HomeController extends GridPane {
 	@FXML private void vyberPes(ActionEvent event) {
 		if( vybraneSlovo.getCesky() == "pes") {
 			spravnyPokus++;
+			alertSpravne.showAndWait();
 			hra.setSpravne(spravnyPokus);
 			hadej.setDisable(false);
 			auto.setDisable(true);
@@ -176,6 +198,7 @@ public class HomeController extends GridPane {
 			kocka.setDisable(true);
 		}
 		else {
+			alertSpatne.showAndWait();
 			spatnyPokus++;
 			hra.setSpatne(spatnyPokus);
 			
@@ -190,6 +213,7 @@ public class HomeController extends GridPane {
 	@FXML private void vyberAuto(ActionEvent event) {
 		if( vybraneSlovo.getCesky() == "auto") {
 			spravnyPokus++;
+			alertSpravne.showAndWait();
 			hra.setSpravne(spravnyPokus);
 			hadej.setDisable(false);
 			auto.setDisable(true);
@@ -200,6 +224,7 @@ public class HomeController extends GridPane {
 			kocka.setDisable(true);
 		}
 		else {
+			alertSpatne.showAndWait();
 			spatnyPokus++;
 			hra.setSpatne(spatnyPokus);
 			
