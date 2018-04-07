@@ -12,6 +12,8 @@ import javafx.fxml.FXML;
 public class HomeController extends GridPane {
 	
 	@FXML private Label slovo;
+	@FXML private Label spravne;
+	@FXML private Label spatne;
 	@FXML private Button hadej;
 	
 	private Hra hra;
@@ -20,6 +22,8 @@ public class HomeController extends GridPane {
 	
 	public void inicializuj(Hra hra){
 		slovo.setText(null);
+		spravne.setText(String.valueOf(hra.getSpravne()));
+		spatne.setText(String.valueOf(hra.getSpatne()));
 		this.hra = hra;
 		//hadej.setOnAction(this::handleButtonAction);
 	
@@ -27,7 +31,6 @@ public class HomeController extends GridPane {
 	
 	@FXML public void novaHra() {
 		inicializuj(new Hra());
-		
 	}
 
 	@FXML private void handleButtonAction(ActionEvent event) {
@@ -37,6 +40,7 @@ public class HomeController extends GridPane {
         
         vybrane = hra.getSeznam().vratSlovo(nahoda).getAnglciky();
         slovo.setText(vybrane);
+ 
         	
    
 	}
