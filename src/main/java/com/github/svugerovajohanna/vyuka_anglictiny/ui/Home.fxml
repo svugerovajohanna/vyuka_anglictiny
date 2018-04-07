@@ -32,7 +32,7 @@
    <children>
       <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="3">
          <children>
-            <Button fx:id="holka" mnemonicParsing="false" prefHeight="160.0" prefWidth="270.0">
+            <Button fx:id="holka" mnemonicParsing="false" onAction="#vyberHolka" prefHeight="160.0" prefWidth="270.0">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -51,7 +51,7 @@
       </VBox>
       <VBox prefHeight="513.0" prefWidth="326.0" GridPane.rowIndex="1">
          <children>
-            <Button fx:id="auto" mnemonicParsing="false" prefHeight="160.0" prefWidth="270.0">
+            <Button fx:id="auto" mnemonicParsing="false" onAction="#vyberAuto" prefHeight="160.0" prefWidth="270.0">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -73,7 +73,7 @@
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
          </GridPane.margin>
          <children>
-            <Button fx:id="kluk" mnemonicParsing="false" prefWidth="270.0">
+            <Button fx:id="kluk" mnemonicParsing="false" onAction="#vyberKluk" prefWidth="270.0">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -98,7 +98,7 @@
       </MenuBar>
       <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="3">
          <children>
-            <Button fx:id="kocka" mnemonicParsing="false" prefHeight="160.0" prefWidth="270.0">
+            <Button fx:id="kocka" mnemonicParsing="false" onAction="#vyberKocka" prefHeight="160.0" prefWidth="270.0">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="120.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -117,7 +117,7 @@
       </VBox>
       <VBox prefHeight="200.0" prefWidth="100.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <children>
-            <Button fx:id="kytka" mnemonicParsing="false" prefHeight="160.0" prefWidth="270.0">
+            <Button fx:id="kytka" mnemonicParsing="false" onAction="#vyberKytka" prefHeight="160.0" prefWidth="270.0">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -139,9 +139,9 @@
       </VBox>
       <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="2">
          <children>
-            <Button fx:id="pes" mnemonicParsing="false" prefHeight="160.0" prefWidth="270.0">
+            <Button fx:id="pes" mnemonicParsing="false" onAction="#vyberPes" prefHeight="160.0" prefWidth="270.0">
                <graphic>
-                  <ImageView fx:id="pes" fitHeight="150.0" fitWidth="267.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="150.0" fitWidth="267.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@pes.png" />
                      </image>
@@ -158,7 +158,7 @@
       </VBox>
       <HBox prefHeight="100.0" prefWidth="200.0" GridPane.rowIndex="4">
          <children>
-            <Button fx:id="hledej" onAction="#handleButtonAction" text="Hádej" />
+            <Button fx:id="hadej" onAction="#handleButtonAction" text="Hádej" />
             <Label fx:id="slovo" alignment="CENTER" prefHeight="28.0" prefWidth="155.0" style="-fx-background-color: white; -fx-border-color: black;" textAlignment="CENTER">
                <font>
                   <Font name="System Bold" size="18.0" />

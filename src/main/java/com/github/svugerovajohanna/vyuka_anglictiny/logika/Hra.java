@@ -4,6 +4,8 @@ public class Hra {
 	
 
 	private SeznamSlov platnaSlova;
+	int spravne;
+	int spatne;
 
 	public Hra(){
 		platnaSlova = new SeznamSlov();
@@ -14,12 +16,30 @@ public class Hra {
 		platnaSlova.vlozSlovo(new Slovo("kytka", "flower", 5));
 		platnaSlova.vlozSlovo(new Slovo("kočka", "cat", 6));
 		
+		spravne = 0;
+		spatne = 0;
+		
 	}
 	
 	public SeznamSlov getSeznam(){
 		return platnaSlova;
 	}
 	
+	public int getSpravne() {
+		return spravne;
+	}
+	
+	public int getSpatne() {
+		return spatne;
+	}
+	
+	public void setSpatne(int spatne) {
+		this.spatne = spatne;
+	}
+	
+	public void setSpravne(int spravne) {
+		this.spravne = spravne;
+	}
 	
 	
 }
